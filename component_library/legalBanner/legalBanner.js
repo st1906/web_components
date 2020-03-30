@@ -114,7 +114,7 @@ button{
 
 //now, let us create our custom element
 
-class LegalBanner extends HTMLElement {
+export class LegalBanner extends HTMLElement {
   constructor() {
     super();
 
