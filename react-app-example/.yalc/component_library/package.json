@@ -1,0 +1,11 @@
+{
+  "name": "component_library",
+  "version": "1.0.0-fcd6465c",
+  "description": "Component library of web components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
