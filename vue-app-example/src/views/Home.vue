@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CalorieCounter v-bind:calories="calories" v-on:newCalorie="changeCalorie" />
+    <CalorieObjectGrid v-bind:calories="calories"/> 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import CalorieCounter from "@/components/CalorieCounter.vue"
+import CalorieObjectGrid from "@/components/CalorieObjectGrid.vue"
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    CalorieCounter,
+    CalorieObjectGrid
+  },
+  data() {
+    return {
+      calories: 0,
+    };
+  },
+  methods: {
+    changeCalorie(newCalorie) {
+      if(newCalorie > 0)
+        this.calories = newCalorie
+    }
+  },
+};
 </script>
+
+<style scoped>
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+  }
+</style>

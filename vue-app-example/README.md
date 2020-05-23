@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### ENV file
+VUE_APP_SPOONACULAR_API_KEY=
