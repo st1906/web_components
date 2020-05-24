@@ -1,6 +1,6 @@
 <template>
     <header id="nav">
-        <h1>Calories equal to?</h1>
+        <h1>What are <strong>Calories</strong> equal to?</h1>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </header>
@@ -16,6 +16,7 @@ export default {
     #nav {
         width: 100%;
         margin: 0;
-        background-color: yellow;
+        background-color:#202733;
+        color: white;
     }
 </style>

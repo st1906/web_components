@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      calories: 0,
+      calories: 100,
     };
   },
   methods: {
