@@ -7,8 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LegalBanner {
+        "bannerTitle": string;
         "text": string;
-        "title": string;
         "type": "big" | "small" | "embedded";
     }
     interface MyComponent {
@@ -28,6 +28,9 @@ export namespace Components {
     interface SocialMediaWidget {
     }
     interface ToastAlert {
+        "alertDescription": string;
+        "alertTitle": string;
+        "isActive": boolean;
     }
 }
 declare global {
@@ -64,8 +67,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LegalBanner {
+        "bannerTitle"?: string;
         "text"?: string;
-        "title"?: string;
         "type"?: "big" | "small" | "embedded";
     }
     interface MyComponent {
@@ -85,6 +88,9 @@ declare namespace LocalJSX {
     interface SocialMediaWidget {
     }
     interface ToastAlert {
+        "alertDescription"?: string;
+        "alertTitle"?: string;
+        "isActive"?: boolean;
     }
     interface IntrinsicElements {
         "legal-banner": LegalBanner;
