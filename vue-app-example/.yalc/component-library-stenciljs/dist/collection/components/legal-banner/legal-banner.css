@@ -1,0 +1,50 @@
+:host {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #124372;
+  color: white;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dismissed {
+  display: none;
+}
+
+.text-container {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 70%;
+}
+
+h3 {
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+p {
+  margin: 0.25rem 0 0.25rem 1rem;
+
+}
+
+.actions-container {
+  padding: 0.5rem 1rem;
+  place-self: center;
+}
+button {
+  border: solid 0.25px white;
+  color: #fff;
+  width: 4rem;
+  background: none;
+  font-size: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  margin: 0rem 0.2rem
+}
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #124372
+}
