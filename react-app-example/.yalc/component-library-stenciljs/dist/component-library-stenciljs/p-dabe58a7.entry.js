@@ -1,0 +1,1 @@
+import{r as o,h as t,H as r}from"./p-90699d25.js";const s=class{constructor(t){o(this,t)}render(){return t(r,null,t("div",{class:"facebook"},t("a",{href:"www.facebook.com"},"Go to facebook")),t("div",null,t("a",{href:"www.twitter.com"},"Go to twitter")))}};s.style=":host{display:block}";export{s as social_media_widget}
