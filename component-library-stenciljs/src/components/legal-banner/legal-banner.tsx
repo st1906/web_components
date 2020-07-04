@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop, State } from "@stencil/core";
+import { Component, ComponentInterface, Host, h, Prop, State } from "@stencil/core"
 
 @Component({
   tag: "legal-banner",
@@ -13,7 +13,7 @@ export class LegalBanner implements ComponentInterface {
   @State() dismissed: boolean = false
 
   handleDismiss = () => {
-    this.dismissed = true;
+    this.dismissed = true
   }
   handleLearnMore = () => {
     window.open('https://policies.google.com/privacy?hl=en-US', '_blank')
@@ -37,3 +37,4 @@ export class LegalBanner implements ComponentInterface {
     );
   }
 }
+

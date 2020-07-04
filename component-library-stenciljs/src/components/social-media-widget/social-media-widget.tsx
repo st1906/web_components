@@ -11,8 +11,11 @@ export class SocialMediaWidget implements ComponentInterface {
   render() {
     return (
       <Host>
-        <div class="facebookIcon">
-          <a></a>
+        <div class="facebook">
+          <a href="www.facebook.com">Go to facebook</a>
+        </div>
+        <div>
+          <a href="www.twitter.com">Go to twitter</a>
         </div>
       </Host>
     );
