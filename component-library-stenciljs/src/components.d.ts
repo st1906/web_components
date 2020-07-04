@@ -7,9 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LegalBanner {
+        "bannerTitle": string;
         "text": string;
-        "title": string;
         "type": "big" | "small" | "embedded";
+    }
+    interface LegalBannerTest {
     }
     interface MyComponent {
         /**
@@ -28,6 +30,9 @@ export namespace Components {
     interface SocialMediaWidget {
     }
     interface ToastAlert {
+        "alertDescription": string;
+        "alertTitle": string;
+        "isActive": boolean;
     }
 }
 declare global {
@@ -36,6 +41,12 @@ declare global {
     var HTMLLegalBannerElement: {
         prototype: HTMLLegalBannerElement;
         new (): HTMLLegalBannerElement;
+    };
+    interface HTMLLegalBannerTestElement extends Components.LegalBannerTest, HTMLStencilElement {
+    }
+    var HTMLLegalBannerTestElement: {
+        prototype: HTMLLegalBannerTestElement;
+        new (): HTMLLegalBannerTestElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -57,6 +68,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "legal-banner": HTMLLegalBannerElement;
+        "legal-banner-test": HTMLLegalBannerTestElement;
         "my-component": HTMLMyComponentElement;
         "social-media-widget": HTMLSocialMediaWidgetElement;
         "toast-alert": HTMLToastAlertElement;
@@ -64,9 +76,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LegalBanner {
+        "bannerTitle"?: string;
         "text"?: string;
-        "title"?: string;
         "type"?: "big" | "small" | "embedded";
+    }
+    interface LegalBannerTest {
     }
     interface MyComponent {
         /**
@@ -85,9 +99,13 @@ declare namespace LocalJSX {
     interface SocialMediaWidget {
     }
     interface ToastAlert {
+        "alertDescription"?: string;
+        "alertTitle"?: string;
+        "isActive"?: boolean;
     }
     interface IntrinsicElements {
         "legal-banner": LegalBanner;
+        "legal-banner-test": LegalBannerTest;
         "my-component": MyComponent;
         "social-media-widget": SocialMediaWidget;
         "toast-alert": ToastAlert;
@@ -98,6 +116,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "legal-banner": LocalJSX.LegalBanner & JSXBase.HTMLAttributes<HTMLLegalBannerElement>;
+            "legal-banner-test": LocalJSX.LegalBannerTest & JSXBase.HTMLAttributes<HTMLLegalBannerTestElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "social-media-widget": LocalJSX.SocialMediaWidget & JSXBase.HTMLAttributes<HTMLSocialMediaWidgetElement>;
             "toast-alert": LocalJSX.ToastAlert & JSXBase.HTMLAttributes<HTMLToastAlertElement>;

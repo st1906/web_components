@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop, State } from "@stencil/core";
+import { Component, ComponentInterface, Host, h, Prop, State } from "@stencil/core"
 
 @Component({
   tag: "legal-banner",
@@ -6,14 +6,14 @@ import { Component, ComponentInterface, Host, h, Prop, State } from "@stencil/co
   shadow: true,
 })
 export class LegalBanner implements ComponentInterface {
-  @Prop() title: string = "Title for the legal banner"
+  @Prop() bannerTitle: string = "Title for the legal banner"
   @Prop() text: string = "The text of my legal banner"
   @Prop() type : 'big' | 'small' | 'embedded' = 'small'
 
   @State() dismissed: boolean = false
 
   handleDismiss = () => {
-    this.dismissed = true;
+    this.dismissed = true
   }
   handleLearnMore = () => {
     window.open('https://policies.google.com/privacy?hl=en-US', '_blank')
@@ -24,7 +24,7 @@ export class LegalBanner implements ComponentInterface {
       <Host style={{display: this.dismissed ? 'none': 'flex'}}>
         <div class='container'>
           <div class="text-container">
-            <h3>{this.title}</h3>
+            <h3>{this.bannerTitle}</h3>
             {this.type=== "big" && <p>{this.text}</p>}
           </div>
           {this.type!=='embedded' &&
@@ -37,3 +37,4 @@ export class LegalBanner implements ComponentInterface {
     );
   }
 }
+
