@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type                             | Default                         |
-| ------------- | -------------- | ----------- | -------------------------------- | ------------------------------- |
-| `bannerTitle` | `banner-title` |             | `string`                         | `"Title for the legal banner"`  |
-| `text`        | `text`         |             | `string`                         | `"The text of my legal banner"` |
-| `type`        | `type`         |             | `"big" \| "embedded" \| "small"` | `'small'`                       |
+| Property         | Attribute         | Description | Type                             | Default                                          |
+| ---------------- | ----------------- | ----------- | -------------------------------- | ------------------------------------------------ |
+| `bannerTitle`    | `banner-title`    |             | `string`                         | `"Title for the legal banner"`                   |
+| `policypageLink` | `policypage-link` |             | `string`                         | `'https://policies.google.com/privacy?hl=en-US'` |
+| `text`           | `text`            |             | `string`                         | `"The text of my legal banner"`                  |
+| `type`           | `type`            |             | `"big" \| "embedded" \| "small"` | `'small'`                                        |
 
 
 ----------------------------------------------
