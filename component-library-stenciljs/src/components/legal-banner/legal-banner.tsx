@@ -9,6 +9,7 @@ export class LegalBanner implements ComponentInterface {
   @Prop() bannerTitle: string = "Title for the legal banner"
   @Prop() text: string = "The text of my legal banner"
   @Prop() type : 'big' | 'small' | 'embedded' = 'small'
+  @Prop() policypageLink : string = 'https://policies.google.com/privacy?hl=en-US'
 
   @State() dismissed: boolean = false
 
@@ -16,7 +17,7 @@ export class LegalBanner implements ComponentInterface {
     this.dismissed = true
   }
   handleLearnMore = () => {
-    window.open('https://policies.google.com/privacy?hl=en-US', '_blank')
+    window.open(this.policypageLink, '_blank')
   }
 
   render() {

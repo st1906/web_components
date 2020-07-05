@@ -1,0 +1,9 @@
+**/__generated__/**/*
+.yalc
+build/
+dist/
+locale/
+node_modules/
+pacts/
+public/
+schema.json

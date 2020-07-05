@@ -1,3 +1,55 @@
 :host {
   display: block;
+  width: 100%;
+  max-width: 320px;
+}
+
+div {
+  padding: 0.5rem;
+  margin: 0.5rem 0.25rem;
+}
+
+.facebook a {
+  color: #4267B2
+}
+
+.facebook a::before{
+  content: "F";
+  color: white;
+  margin-right: 8px;
+  background-color: #4267B2;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 25%;
+  border: solid 1px black;
+}
+
+.twitter a {
+  color: #1DA1F2
+}
+
+.twitter a::before{
+  content: "T";
+  color: white;
+  margin-right: 8px;
+  background-color: #1DA1F2;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 25%;
+  border: solid 1px black;
+}
+
+.youtube a {
+  color: #FF0000
+}
+
+.youtube a::before{
+  content: "Y";
+  color: white;
+  margin-right: 8px;
+  background-color: #FF0000;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 25%;
+  border: solid 1px black;
 }

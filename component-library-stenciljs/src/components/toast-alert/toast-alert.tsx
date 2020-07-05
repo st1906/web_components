@@ -11,7 +11,7 @@ export class ToastAlert implements ComponentInterface {
   @Prop() isActive: boolean = false;
 
   handleClose = () => this.isActive = false;
-  // ToDo: Some css modal stuff to fix
+
   render() {
     return (
       <Host style={{display: this.isActive ? 'block' : 'none'}}>
