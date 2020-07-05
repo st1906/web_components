@@ -12,8 +12,6 @@ function App() {
     <Router>
       <div className="App">
         <legal-banner></legal-banner>
-        <toast-alert is-active="true" alert-title='An error happened' 
-        alert-description='Send this error (RX20041) to support to learn more'></toast-alert>
         <Header />
         <Switch>
           <Route path="/about" exact component={AboutPage} />

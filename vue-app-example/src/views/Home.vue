@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <legal-banner></legal-banner>
     <CalorieCounter v-bind:calories="calories" v-on:newCalorie="changeCalorie" />
     <CalorieObjectGrid v-bind:calories="calories"/> 
   </div>
