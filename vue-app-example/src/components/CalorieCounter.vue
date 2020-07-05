@@ -3,6 +3,11 @@
         <button v-on:click="$emit('newCalorie', calories - 100)"> - </button>
         <p>{{calories}} kcal</p>
         <button  v-on:click="$emit('newCalorie', calories + 100)"> + </button>
+        <toast-alert
+            v-bind:is-active="isError"
+            alert-title="Error"
+            alert-description="Can't go below 100"
+      ></toast-alert>
     </div>
 </template>
 
@@ -10,7 +15,8 @@
 export default {
     name: "CalorieCounter",
     props: {
-        calories: Number
+        calories: Number,
+        isError: Boolean
     }
 }
 </script>

@@ -2,15 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Feed } from "../../components/Feed";
 import { FeedItem } from "../../components/homeComponents/FeedItem";
+import {Sidebar} from '../../components/Sidebar';
+import 'component-library-stenciljs'
 
 const StyledHomeContainer = styled.div`
   display: flex;
   max-width: 1080px;
   flex-direction: row;
+  margin: 0 auto;
 `;
 
 
-// Need to settle on final pictures
 const dataList = [
   {
     title: "Best product by consumer trust vote",
@@ -28,8 +30,17 @@ const dataList = [
     },
 ];
 
-export const HomePage = (props) => (
+export const HomePage = () => (
   <StyledHomeContainer>
     <Feed dataList={dataList} FeedItem={FeedItem} />
+    <Sidebar>
+      <div style={{border: "black 1px solid", borderRadius: '16px', padding: '1rem 2rem'}}>
+      <p>Social media links</p>
+      <social-media-widget
+        facebook-link='https://www.facebook.com/facebook'
+        twitter-link='https://twitter.com/Twitter'
+        youtube-link='https://www.youtube.com/user/YouTube'
+      ></social-media-widget></div>
+    </Sidebar>
   </StyledHomeContainer>
 );

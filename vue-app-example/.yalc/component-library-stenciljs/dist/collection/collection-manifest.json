@@ -1,8 +1,7 @@
 {
   "entries": [
+    "./components/inflation-converter/inflation-converter.js",
     "./components/legal-banner/legal-banner.js",
-    "./components/legal-banner-test/legal-banner-test.js",
-    "./components/my-component/my-component.js",
     "./components/social-media-widget/social-media-widget.js",
     "./components/toast-alert/toast-alert.js"
   ],
