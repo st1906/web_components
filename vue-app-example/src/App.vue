@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <legal-banner style="width: 102%" banner-title='By using this app you accept our privacy policy' type='small'></legal-banner>
+    <legal-banner style="width: 102%" banner-title='By using this app you accept our privacy policy' 
+    type='small'></legal-banner>
     <Header/>
     <router-view/>
   </div>

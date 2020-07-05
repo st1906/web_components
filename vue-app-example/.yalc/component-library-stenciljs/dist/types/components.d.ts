@@ -6,28 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 export namespace Components {
+    interface InflationConverter {
+        "moneyValue": number;
+        "startDate": string;
+    }
     interface LegalBanner {
         "bannerTitle": string;
+        "policypageLink": string;
         "text": string;
         "type": "big" | "small" | "embedded";
     }
-    interface LegalBannerTest {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface SocialMediaWidget {
+        "facebookLink": string;
+        "twitterLink": string;
+        "youtubeLink": string;
     }
     interface ToastAlert {
         "alertDescription": string;
@@ -36,23 +28,17 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLInflationConverterElement extends Components.InflationConverter, HTMLStencilElement {
+    }
+    var HTMLInflationConverterElement: {
+        prototype: HTMLInflationConverterElement;
+        new (): HTMLInflationConverterElement;
+    };
     interface HTMLLegalBannerElement extends Components.LegalBanner, HTMLStencilElement {
     }
     var HTMLLegalBannerElement: {
         prototype: HTMLLegalBannerElement;
         new (): HTMLLegalBannerElement;
-    };
-    interface HTMLLegalBannerTestElement extends Components.LegalBannerTest, HTMLStencilElement {
-    }
-    var HTMLLegalBannerTestElement: {
-        prototype: HTMLLegalBannerTestElement;
-        new (): HTMLLegalBannerTestElement;
-    };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
     };
     interface HTMLSocialMediaWidgetElement extends Components.SocialMediaWidget, HTMLStencilElement {
     }
@@ -67,36 +53,27 @@ declare global {
         new (): HTMLToastAlertElement;
     };
     interface HTMLElementTagNameMap {
+        "inflation-converter": HTMLInflationConverterElement;
         "legal-banner": HTMLLegalBannerElement;
-        "legal-banner-test": HTMLLegalBannerTestElement;
-        "my-component": HTMLMyComponentElement;
         "social-media-widget": HTMLSocialMediaWidgetElement;
         "toast-alert": HTMLToastAlertElement;
     }
 }
 declare namespace LocalJSX {
+    interface InflationConverter {
+        "moneyValue"?: number;
+        "startDate"?: string;
+    }
     interface LegalBanner {
         "bannerTitle"?: string;
+        "policypageLink"?: string;
         "text"?: string;
         "type"?: "big" | "small" | "embedded";
     }
-    interface LegalBannerTest {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface SocialMediaWidget {
+        "facebookLink"?: string;
+        "twitterLink"?: string;
+        "youtubeLink"?: string;
     }
     interface ToastAlert {
         "alertDescription"?: string;
@@ -104,9 +81,8 @@ declare namespace LocalJSX {
         "isActive"?: boolean;
     }
     interface IntrinsicElements {
+        "inflation-converter": InflationConverter;
         "legal-banner": LegalBanner;
-        "legal-banner-test": LegalBannerTest;
-        "my-component": MyComponent;
         "social-media-widget": SocialMediaWidget;
         "toast-alert": ToastAlert;
     }
@@ -115,9 +91,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "inflation-converter": LocalJSX.InflationConverter & JSXBase.HTMLAttributes<HTMLInflationConverterElement>;
             "legal-banner": LocalJSX.LegalBanner & JSXBase.HTMLAttributes<HTMLLegalBannerElement>;
-            "legal-banner-test": LocalJSX.LegalBannerTest & JSXBase.HTMLAttributes<HTMLLegalBannerTestElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "social-media-widget": LocalJSX.SocialMediaWidget & JSXBase.HTMLAttributes<HTMLSocialMediaWidgetElement>;
             "toast-alert": LocalJSX.ToastAlert & JSXBase.HTMLAttributes<HTMLToastAlertElement>;
         }

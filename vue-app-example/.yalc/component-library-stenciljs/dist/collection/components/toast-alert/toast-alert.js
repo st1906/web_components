@@ -6,7 +6,6 @@ export class ToastAlert {
         this.isActive = false;
         this.handleClose = () => this.isActive = false;
     }
-    // ToDo: Some css modal stuff to fix
     render() {
         return (h(Host, { style: { display: this.isActive ? 'block' : 'none' } },
             h("div", { class: "container" },
