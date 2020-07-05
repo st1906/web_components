@@ -13,12 +13,14 @@ export const BuyPage = () => {
       shortDescription:
         "The basic package covers the most essential need a customer can expect (Note: Clicking on buy returns error)",
       handleBuy: () => setErrorAlert(true),
+      price: 10
     },
     {
       productName: "Premium package",
       shortDescription:
         "The basic package covers everything a customer can expect (Note: Clicking on buy returns a success message)",
       handleBuy: () => setSuccessAlert(true),
+      price: 25
     },
   ];
 

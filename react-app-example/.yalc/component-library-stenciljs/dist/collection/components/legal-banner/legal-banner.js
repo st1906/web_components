@@ -4,12 +4,13 @@ export class LegalBanner {
         this.bannerTitle = "Title for the legal banner";
         this.text = "The text of my legal banner";
         this.type = 'small';
+        this.policypageLink = 'https://policies.google.com/privacy?hl=en-US';
         this.dismissed = false;
         this.handleDismiss = () => {
             this.dismissed = true;
         };
         this.handleLearnMore = () => {
-            window.open('https://policies.google.com/privacy?hl=en-US', '_blank');
+            window.open(this.policypageLink, '_blank');
         };
     }
     render() {
@@ -85,6 +86,24 @@ export class LegalBanner {
             "attribute": "type",
             "reflect": false,
             "defaultValue": "'small'"
+        },
+        "policypageLink": {
+            "type": "string",
+            "mutable": false,
+            "complexType": {
+                "original": "string",
+                "resolved": "string",
+                "references": {}
+            },
+            "required": false,
+            "optional": false,
+            "docs": {
+                "tags": [],
+                "text": ""
+            },
+            "attribute": "policypage-link",
+            "reflect": false,
+            "defaultValue": "'https://policies.google.com/privacy?hl=en-US'"
         }
     }; }
     static get states() { return {

@@ -11,7 +11,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <legal-banner></legal-banner>
+        <legal-banner banner-title="Privacy policy"
+          text="When using this page your data is being collected in accordance to GDPR"
+          type="big"
+        ></legal-banner>
         <Header />
         <Switch>
           <Route path="/about" exact component={AboutPage} />
